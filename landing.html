@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  <link rel="manifest" href="/manifest.json">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover">
@@ -11,7 +12,7 @@
 <body>
 
     
-<script>
+<!-- <script>
   
   if (!window.opener) {
     window.open('index.html', '_blank', [
@@ -27,6 +28,12 @@
       'location=no',
       
     ].join(','));
+  }
+</script> -->
+
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js');
   }
 </script>
 </body>
