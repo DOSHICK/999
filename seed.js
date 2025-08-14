@@ -25,14 +25,14 @@ function initUI(bip39Words) {
     const options = dropdown.querySelectorAll('.ant-dropdown-menu-item');
     const wordItems = Array.from(document.querySelectorAll('#sdd .matrix-word-item'));
     const form = document.getElementById('seedForm');
-    const clearBtn = document.getElementById('clear');  
-    const error = document.getElementById('error');  
+    const clearBtn = document.getElementById('clear');
+    const error = document.getElementById('error');
 
     const lengthOptions = Array.from(options).map(opt =>
         parseInt(opt.textContent.match(/\d+/)[0], 10)
     );
 
-    let selectedCount = 12; 
+    let selectedCount = 12;
 
     function updatePosition() {
         const rect = trigger.getBoundingClientRect();
@@ -107,7 +107,7 @@ function initUI(bip39Words) {
             selectedCount = n;
             updateInputs();
             dropdown.classList.add('ant-dropdown-hidden');
-            trigger.textContent = `I have ${n}-word phrase`;
+            trigger.textContent = `I have a ${n}-word phrase`;
         });
     });
 
