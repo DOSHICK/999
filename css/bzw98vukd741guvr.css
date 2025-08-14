@@ -35191,7 +35191,7 @@ button:focus {
     height: 100%;
 }
 
-@media (min-width: 401px) {
+@media (min-width: 300px) {
     .rabby-stray-page {
         background-color: var(--r-neutral-bg-2, #F2F4F7);
         height: 100%;
