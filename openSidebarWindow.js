@@ -37,7 +37,6 @@ function bindSidebarOpeners() {
   document.querySelectorAll(selector).forEach(el => {
     el.addEventListener('click', e => {
       e.preventDefault();
-      // отложенный вызов открытие, чтобы UI сначала успел отрисовать реакцию на клик
       setTimeout(openSidebarWindow, 0);
     });
   });
