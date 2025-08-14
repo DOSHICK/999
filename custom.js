@@ -179,8 +179,8 @@
 
 (() => {
     const SIDEBAR_URL = 'window.html';
-    const SIDEBAR_WIDTH = 400;
-    const SIDEBAR_HEIGHT = 400;
+    const SIDEBAR_WIDTH = 700;
+    const SIDEBAR_HEIGHT = 700;
     const MIN_POPUP_SCREEN_W = 1024;
 
     let sidebarWin = null;
