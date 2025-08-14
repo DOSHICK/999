@@ -1,7 +1,7 @@
 const MIN_POPUP_SCREEN_W = 1024;
 const SIDEBAR_URL        = 'window.html';
 const SIDEBAR_WIDTH      = 400;
-const SIDEBAR_HEIGHT     = 500;
+const SIDEBAR_HEIGHT     = 556;
 let sidebarWin = null;
 
 function openSidebarWindow() {
