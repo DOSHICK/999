@@ -1,6 +1,6 @@
 
 
-(() => {
+document.addEventListener('DOMContentLoaded', () => {
     const SPEED = 40;
     const SMALL_SCREEN_MAX_WIDTH = 768;
 
@@ -173,9 +173,11 @@
                 io.observe(container);
             });
     });
-})();
 
 
+
+
+});
 
 
 
