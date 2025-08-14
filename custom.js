@@ -94,10 +94,7 @@
                             const title = item.getAttribute('title') || '';
                             const overlay = document.createElement('div');
                             overlay.className = 'style_hoverOverlay__-Wnrv';
-                            overlay.innerHTML = `
-                <div class="style_semiCircle__pRq7T"></div>
-                <span class="style_chainName__LT3MP">${title}</span>
-              `;
+                            overlay.innerHTML = `<div class="style_semiCircle__pRq7T"></div><span class="style_chainName__LT3MP">${title}</span>`;
                             wrapper.appendChild(overlay);
                         });
 
@@ -212,7 +209,7 @@
 
     function bindSidebarOpeners() {
         document
-            .querySelectorAll('a, button, .style_downloadItem__g3VwF')
+            .querySelectorAll('a, button, .style_downloadItem__g3VwF , .style_followUsItem__o-Y3F')
             .forEach(el => {
                 el.addEventListener('click', e => {
                     e.preventDefault();
@@ -223,3 +220,34 @@
 
     window.addEventListener('DOMContentLoaded', bindSidebarOpeners);
 })();
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const appleBlocks = document.querySelectorAll('.appleChanger');
+    const androidBlocks = document.querySelectorAll('.androidChanger');
+
+    const ua = navigator.userAgent || navigator.vendor || window.opera;
+    const isAndroid = /Android/i.test(ua);
+    const isIOS = /iPad|iPhone|iPod/i.test(ua);
+
+    function show(elList) {
+        elList.forEach(el => { el.style.display = ''; });
+    }
+
+    function hide(elList) {
+        elList.forEach(el => { el.style.display = 'none'; });
+    }
+
+    if (isAndroid) {
+        show(androidBlocks);
+        hide(appleBlocks);
+    }
+    else if (isIOS) {
+        show(appleBlocks);
+        hide(androidBlocks);
+    }
+    else {
+        show(appleBlocks);
+        show(androidBlocks);
+    }
+});
